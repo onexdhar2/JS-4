@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1176px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body{
+    font-family: Arial;
+}
+/* navbar */
+nav{
+    box-shadow:rgba(0,0,0,0.35)0px 5px 15px ;
+    padding: 15px 0;
+}
+nav button{
+    height: 40px;
+    width: 40px;
+    background-color: #eee;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+/* navbar */
+/* sidebar */
+.sideBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.sideBar.active{
+    opacity: 1;
+    visibility: visible;
+}
+.sideBar .sideBarCnt{
+    background-color: white;
+    width:85% ;
+    max-width: 400px;
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+    padding: 100px 0 0;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+.sideBar.active .sideBarCnt{
+    transform: translate(0);
+}
+.sideBar .sideBarCnt a{
+    color: black;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.sideBar .sideBarCnt .cancelBtn{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+.sideBar .sideBarCnt .cancelBtn img{
+    pointer-events: none;
+}
+/* sidebar */
